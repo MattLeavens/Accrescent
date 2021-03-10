@@ -12,6 +12,7 @@ export interface ArticleCreatorProps{
     onGenreChange: () => void;
     onEditorStateChange: () => void;
     onArticleCreate: () => void;
+    onAuthorChange: any;
 }
 
 function ArticleCreator(props:ArticleCreatorProps) {
@@ -24,6 +25,12 @@ function ArticleCreator(props:ArticleCreatorProps) {
                     const title = event.target.value
                     // console.log(title)
                     props.onTitleChange(title)
+                }}/>
+
+                <input type="text" id="name" name="name" onChange={(event) => {
+                    const author = event.target.value
+                    // console.log(title)
+                    props.onAuthorChange(author)
                 }}/>
 
                 <GenreSelector onGenreChange={props.onGenreChange}/>

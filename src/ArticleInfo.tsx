@@ -10,7 +10,7 @@ export default function ArticleInfo ({article}:ArticleInfoProps) {
     return (
         <div>
             <h1>{articleTitle}</h1>
-            <p>{articleDate}~~~{articleAuthor}~~~{articleGenre.join(", ")}</p>
+            <p>{articleDate.toLocaleDateString()}~~~{articleAuthor}~~~{articleGenre.join(", ")}</p>
             <p>{articleBody}</p>
         </div>
     )

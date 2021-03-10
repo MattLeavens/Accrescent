@@ -19,7 +19,8 @@ class App extends React.Component/*<void, AppState>*/ {
             articles: articles,
             editorContent: "",
             editorTitle: "",
-            editorGenre: []
+            editorGenre: [],
+            editorAuthor: ""
         }
     }
 
@@ -32,7 +33,8 @@ class App extends React.Component/*<void, AppState>*/ {
                         articleTitle: this.state.editorTitle,
                         articleBody: this.state.editorContent,
                         articleGenre: this.state.editorGenre,
-                        date: new Date()
+                        articleDate: new Date(),
+                        articleAuthor: this.state.editorAuthor
                     }]
                 }
             })
@@ -50,6 +52,14 @@ class App extends React.Component/*<void, AppState>*/ {
                 return {
                     ...state,
                     editorTitle: newTitle
+                }
+            })
+        }
+        const onAuthorChange = (newAuthor) => {
+            this.setState((state) => {
+                return {
+                    ...state,
+                    editorAuthor: newAuthor
                 }
             })
         }
@@ -72,6 +82,7 @@ class App extends React.Component/*<void, AppState>*/ {
                                 onEditorStateChange={onEditorStateChange}
                                 onTitleChange={onTitleChange}
                                 onGenreChange={onGenreChange}
+                                onAuthorChange={onAuthorChange}
                 />
             </>
         )
