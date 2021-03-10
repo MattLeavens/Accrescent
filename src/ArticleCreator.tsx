@@ -6,24 +6,27 @@ import Card from "./Card";
 import Button from "./Button";
 import Container from "./Container";
 import GenreSelector from "./GenreSelector";
-import {genresList} from "./genres";
 
-function ArticleCreator(props) {
+export interface ArticleCreatorProps{
+    onTitleChange: any;
+    onGenreChange: () => void;
+    onEditorStateChange: () => void;
+    onArticleCreate: () => void;
+}
+
+function ArticleCreator(props:ArticleCreatorProps) {
     return (
-
 
         <Container>
             <Card title="Create an Article">
 
                 <input type="text" id="name" name="name" onChange={(event) => {
                     const title = event.target.value
-                    console.log(title)
+                    // console.log(title)
                     props.onTitleChange(title)
                 }}/>
 
                 <GenreSelector onGenreChange={props.onGenreChange}/>
-
-
 
                 <Editor
                     toolbarClassName="toolbarClassName"

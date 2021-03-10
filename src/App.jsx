@@ -4,16 +4,16 @@ import React from "react";
 import ArticleCreator from "./ArticleCreator";
 import ArticleList from "./ArticleList";
 import {articles} from "./articles";
-import CreatableSelect from 'react-select/creatable';
-import {genresList} from "./genres";
-import Card from "./Card";
-import GenreSelector from "./GenreSelector";
 
 
+// interface AppState {
+    //articles:any ;
+    //editorContent:string;
+// }
 
 
-class App extends React.Component {
-    constructor(props) {
+class App extends React.Component/*<void, AppState>*/ {
+    constructor(props/*: void*/) {
         super(props)
         this.state = {
             articles: articles,
