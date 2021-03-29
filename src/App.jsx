@@ -4,7 +4,17 @@ import React from "react";
 import ArticleCreator from "./ArticleCreator";
 import ArticleList from "./ArticleList";
 import {articles} from "./articles";
-
+import HomePage from "./HomePage";
+import ArticlePage from "./ArticlePage";
+import GenrePage from "./GenrePage";
+import PageHeader from "./PageHeader";
+import ProfilePage from "./ProfilePage";
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+} from "react-router-dom";
 
 // interface AppState {
     //articles:any ;
@@ -75,15 +85,36 @@ class App extends React.Component/*<void, AppState>*/ {
 
         return (
             <>
+                <Router>
 
-                <ArticleList articles={this.state.articles}/>
 
-                <ArticleCreator onArticleCreate={onArticleCreate}
-                                onEditorStateChange={onEditorStateChange}
-                                onTitleChange={onTitleChange}
-                                onGenreChange={onGenreChange}
-                                onAuthorChange={onAuthorChange}
-                />
+                <Switch>
+                    <Route exact path="/">
+                        <HomePage/>
+                    </Route>
+                    <Route path="/profilepage">
+                        <ProfilePage/>
+                    </Route>
+                    <Route path="/genrepage">
+                        <GenrePage/>
+                    </Route>
+                    <Route path="/article/create">
+                        <PageHeader/>
+                        <ArticleCreator onArticleCreate={onArticleCreate}
+                                        onEditorStateChange={onEditorStateChange}
+                                        onTitleChange={onTitleChange}
+                                        onGenreChange={onGenreChange}
+                                        onAuthorChange={onAuthorChange}
+                        />
+                        <ArticleList articles={this.state.articles}/>
+                    </Route>
+                    <Route path="/articlepage">
+                        <ArticlePage/>
+                    </Route>
+                </Switch>
+
+                </Router>
+
             </>
         )
     }
