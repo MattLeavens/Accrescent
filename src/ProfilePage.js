@@ -73,11 +73,7 @@ export default class ProfilePage extends React.Component {
                         </div>
                     </div>
 
-
-
-
-
-
+             </div>
 
 
                     <hr/>
@@ -149,7 +145,7 @@ export default class ProfilePage extends React.Component {
                                         </div>
 
                                     </div>
-            </div>
+
                 {/* /.row */}
 
         </div>

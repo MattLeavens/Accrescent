@@ -9,6 +9,7 @@ import {
 } from "react-router-dom";
 
 
+
 export default class HomePage extends React.Component {
     render() {
         return (
@@ -93,7 +94,7 @@ export default class HomePage extends React.Component {
 
                     <article className="blog-post">
                         <h2 className="blog-post-title">Sample blog post</h2>
-                        <p className="blog-post-meta">January 1, 2014 by <Link href="#">Mark</Link></p>
+                        <p className="blog-post-meta">January 1, 2014 by <Link to="/profilepage">Mark</Link></p>
 
                         <p>This blog post shows a few different types of content that’s supported and styled with Bootstrap. Basic typography, images, and code are all supported.</p>
                         <hr/>
@@ -197,13 +198,6 @@ export default class HomePage extends React.Component {
 
         </main>
 
-
-        <footer className="blog-footer">
-            <p>Blog template built for <a href="https://getbootstrap.com/">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
-            <p>
-                <Link href="#">Back to top</Link>
-            </p>
-        </footer>
         </>
 
         );

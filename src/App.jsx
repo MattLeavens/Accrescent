@@ -9,6 +9,7 @@ import ArticlePage from "./ArticlePage";
 import GenrePage from "./GenrePage";
 import PageHeader from "./PageHeader";
 import ProfilePage from "./ProfilePage";
+import PageFoot from "./PageFoot";
 import {
     BrowserRouter as Router,
     Switch,
@@ -91,6 +92,7 @@ class App extends React.Component/*<void, AppState>*/ {
                 <Switch>
                     <Route exact path="/">
                         <HomePage/>
+                        <PageFoot/>
                     </Route>
                     <Route path="/profilepage">
                         <ProfilePage/>
