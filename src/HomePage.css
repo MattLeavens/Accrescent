@@ -212,11 +212,19 @@ h1, h2, h3, h4, h5, h6 {
 /*Custom Styles added below*/
 
 .accrescentGradient {
-    background-image: linear-gradient(to left, #581845, #900C3F, #C70039);
+    background-image: linear-gradient(to left, #581845, #900C3F, #C70039, #C73256);
     -webkit-background-clip: text;
     -moz-background-clip: text;
     background-clip: text;
-    color: transparent;;
+    color: transparent;
+}
+
+.accrescentGradient:hover {
+    background-image: linear-gradient(to left, #581845, #900C3F, #C70039, #C73256, #FA6B7A);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 
 
@@ -241,4 +249,11 @@ h1, h2, h3, h4, h5, h6 {
     .bdPlaceholderImgLg {
         font-size: 3.5rem;
     }
+}
+
+.link {
+    color: #282c35;
+}
+.link:hover{
+    color: #581845;
 }

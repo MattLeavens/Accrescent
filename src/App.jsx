@@ -95,10 +95,14 @@ class App extends React.Component/*<void, AppState>*/ {
                         <PageFoot/>
                     </Route>
                     <Route path="/profilepage">
+                        <PageHeader/>
                         <ProfilePage/>
+                        <PageFoot/>
                     </Route>
                     <Route path="/genrepage">
+                        <PageHeader/>
                         <GenrePage/>
+                        <PageFoot/>
                     </Route>
                     <Route path="/article/create">
                         <PageHeader/>
@@ -109,9 +113,12 @@ class App extends React.Component/*<void, AppState>*/ {
                                         onAuthorChange={onAuthorChange}
                         />
                         <ArticleList articles={this.state.articles}/>
+                        <PageFoot/>
                     </Route>
                     <Route path="/articlepage">
+                        <PageHeader/>
                         <ArticlePage/>
+                        <PageFoot/>
                     </Route>
                 </Switch>
 

@@ -18,10 +18,10 @@ export default class HomePage extends React.Component {
             <header className="blog-header py-3">
                 <div className="row flex-nowrap justify-content-between align-items-center">
                     <div className="col-4 pt-1">
-                        <Link className="link-secondary" to="/article/create">Create an Article</Link>
+                        <Link to="/article/create" className="link">Create an Article</Link>
                     </div>
                     <div className="col-4 text-center">
-                        <Link className="blog-header-logo accrescentGradient" href="#">Accrescent</Link>
+                        <Link className="blog-header-logo accrescentGradient" to="/">Accrescent</Link>
                     </div>
                     <div className="col-4 d-flex justify-content-end align-items-center">
                         <Link className="link-secondary" href="#" aria-label="Search">
